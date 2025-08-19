@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculatrice De Beneficiaire</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body class="container mt-5">
+        <header class="text-center mb-5">
+            <h1 class="display-4">Marge Beneficiaire</h1>
+            <p class="lead">Entrez Vos couts et votre Prix de vente</p>
+        </header>
+    
+        <main class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="calculatorForm" class="mb-4">
+                    <div class="mb-3">
+                        <label for="couts" class="form-label">Cout de production</label>
+                        <input type="number" id="couts" class="form-control" placeholder="Entrez le coût de production"
+                            required>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="prixVente" class="form-label">Prix de Vente</label>
+                        <input type="number" id="prixVente" class="form-control" placeholder="Entrez le prix de vente"
+                            required>
+                    </div>
+    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">Calculer</button>
+                    </div>
+                </form>
+    <section id="resultat">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Résultat :</h2>
+                        <p id="message" class="card-text fs-5 mt-3">Aucune donnée pour le moment.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <blockquote class="blockquote mb-0">
+                            <p class="small">Votre marge bénéficiaire apparaîtra ici</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        
+        
+    </section>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>
