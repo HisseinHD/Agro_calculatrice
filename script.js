@@ -1,4 +1,3 @@
-
 // On attend que l'utilisateur envoie le formulaire
 document
   .getElementById("calculatorForm")
@@ -17,18 +16,23 @@ document
       return;
     }
 
+    // Vérification des valeurs négatives
+    if (couts < 0 || prixVente < 0) {
+      document.getElementById("message").textContent =
+        "Valeur négative interdite.";
+      return;
+    }
+
     // Appel de la fonction de calcul
     let marge = calculerMarge(prixVente, couts);
 
-    // Affichage du résultat avec condition
+    // Affichage du résultat
     afficherResultat(marge);
   });
-
 
 function calculerMarge(prix, couts) {
   return prix - couts;
 }
-
 
 function afficherResultat(marge) {
   let message = "";
@@ -36,9 +40,9 @@ function afficherResultat(marge) {
   if (marge > 0) {
     message = `Votre marge est positive : +${marge} (Rentable)`;
   } else if (marge === 0) {
-    message = " Votre marge est nulle : Vous êtes à l'équilibre.";
+    message = "Votre marge est nulle : Vous êtes à l'équilibre.";
   } else {
-    message = ` Votre marge est négative : ${marge} (Perte)`;
+    message = `Votre marge est négative : ${marge} (Perte)`;
   }
 
   // On injecte le message dans le HTML
